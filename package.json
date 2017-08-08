@@ -1,0 +1,23 @@
+{
+  "name": "roadtripnode",
+  "version": "1.0.0",
+  "description": "Road Trip Project using Node.js and Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColinStellDev96/roadTripNode.git"
+  },
+  "author": "Colin Stell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ColinStellDev96/roadTripNode/issues"
+  },
+  "homepage": "https://github.com/ColinStellDev96/roadTripNode#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}

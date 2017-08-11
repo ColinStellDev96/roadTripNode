@@ -1,7 +1,17 @@
+// REQUIRE
 var express = require('express');
+var request = require('request');
+var bodyParser = require('body-parser');
+
+// APP
 var app = express();
 
+// STATIC PATHS
 app.use(express.static('./public'));
+
+// BODY PARSER MIDDLEWARE
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 /*---- CHICAGO/ HOME --------------------------------------*/
 app.get('/chicago', function (req, res) {
@@ -10,6 +20,10 @@ app.get('/chicago', function (req, res) {
 
 app.post('/boston', function (req, res) { //Next City Button
     res.redirect('./boston.html');
+});
+
+app.get('/cargo', function (req, res) {
+    res.sendFile('./cargo.html', {root: './public'});
 });
 
 /* --- BOSTON --------------------------------------------- */

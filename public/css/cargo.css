@@ -1,0 +1,85 @@
+body {
+    background-color: #666669;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 84px;
+    color: lightgrey;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    color: lightgrey;
+    margin-bottom: 35px;
+    margin-top: -10px;
+}
+
+h3 {
+    margin-top: -25px;
+    color: lightgrey;
+    text-transform: uppercase;
+}
+
+section {
+    margin-top: 10px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.row {
+    margin-top: 30px;
+}
+
+img {
+    height: 250px;
+    width: 280px;
+}
+
+h4 {
+    display: inline-block;
+    color: black;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 10px 0 0 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+p {
+    font-size: 20px;
+    margin: 10px 0 0 5px;
+    color: lightgrey;
+}
+
+.glyphicon {
+    font-size: 20px;
+    margin: 10px 10px 0 10px;
+}
+
+.add:hover {
+    color: #4d7750;
+}
+
+.remove:hover {
+    color: #c94a4a;
+}
+
+#count-section {
+    margin-top: 100px;
+}
+
+#count-section p {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.col-md-6  button{
+    font-size: 30px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+}

@@ -12,15 +12,16 @@
     <h2>Get Your Road Trip Cargo Here!</h2>
     <h3>$200 Limit/ 200(lb) limit</h3>
 
-    <div class="row">
+    <!-- CARGO DISPLAY SECTION -->
 
+    <div class="row">
           <div class="col-xs-6 col-sm-3">
               <img src='/imgs/cooler.jpg' class="img-responsive img-rounded">
               <section>
                   <h4>Cooler</h4>
                   <p><strong>COST:</strong> $100 </p>
                   <p><strong>WEIGHT:</strong> 50(lbs)</p>
-                  <p><span class="glyphicon add glyphicon-plus"></span><span class="glyphicon remove glyphicon-remove"></span></p>
+                  <p><span class="glyphicon add glyphicon-plus" id="add-cooler" value="100"></span><span class="glyphicon remove glyphicon-remove" id="remove-cooler"></span></p>
               <section>
           </div>
 
@@ -30,7 +31,7 @@
                   <h4>Spare Tire</h4>
                   <p><strong>COST:</strong> $150 </p>
                   <p><strong>WEIGHT:</strong> 180(lbs)</p>
-                  <p><span class="glyphicon add glyphicon-plus"></span><span class="glyphicon remove glyphicon-remove"></span></p>
+                  <p><span class="glyphicon add glyphicon-plus" id="add-tire"></span><span class="glyphicon remove glyphicon-remove" id="remove-tire"></span></p>
               <section>
           </div>
 
@@ -40,7 +41,7 @@
                   <h4>Water</h4>
                   <p><strong>COST:</strong> $10 </p>
                   <p><strong>WEIGHT:</strong> 10(lbs)</p>
-                  <p><span class="glyphicon add glyphicon-plus"></span><span class="glyphicon remove glyphicon-remove"></span></p>
+                  <p><span class="glyphicon add glyphicon-plus" id="add-water"></span><span class="glyphicon remove glyphicon-remove" id="remove-water"></span></p>
               <section>
           </div>
 
@@ -50,22 +51,25 @@
                   <h4>Beef Jerky</h4>
                   <p><strong>COST:</strong> $5.</p>
                   <p><strong>WEIGHT:</strong> 1(lb)</p>
-                  <p><span class="glyphicon add glyphicon-plus"></span><span class="glyphicon remove glyphicon-remove"></span></p>
+                  <p><span class="glyphicon add glyphicon-plus" id="add-jerky"></span><span class="glyphicon remove glyphicon-remove" id="remove-jerky"></span></p>
               <section>
           </div>
     </div>
 
+    <!-- COST/WEIGHT Count Section & Cargo Validate Button -->
+
     <div class="row" id="count-section">
       <div class="col-md-6">
-          <p id="cost-count">TOTAL COST: </p>
-          <p id="weight-count">TOTAL WEIGHT: </p>
+          <p>TOTAL COST ($): <span id="cost-count"> 0</span></p>
+          <p>TOTAL WEIGHT (lbs): <span id="weight-count"> 0 </span></p>
       </div>
       <div class="col-md-6">
-          <button type="button" class="btn btn-default">Submit Your Cargo</button>
+          <button id ="cargo_btn" type="button" class="btn btn-success">Submit Your Cargo</button>
       </div>
     </div>
 
     <!-- SCRIPT TAGS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src='/main.js'></script>
     </body>

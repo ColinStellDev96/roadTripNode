@@ -22,9 +22,13 @@ app.post('/boston', function (req, res) { //Next City Button
     res.redirect('./boston.html');
 });
 
+/* --- CARGO PAGE -----------------------------------------*/
+
 app.get('/cargo', function (req, res) {
     res.sendFile('./cargo.html', {root: './public'});
 });
+
+
 
 /* --- BOSTON --------------------------------------------- */
 app.get('/boston', function (req, res) {

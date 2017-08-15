@@ -17,9 +17,11 @@ var remJerky = $('#remove-jerky');
 var total_cost = 0;
 var total_weight = 0;
 
+
+
 // Button Function
 var btnTotals = function () {
-    var button = $('button');
+    var button = $('#cargo_btn');
     var finalCost = Number($('#cost-count').text());
     var finalWeight = Number($('#weight-count').text());
     console.log("cost: " + finalCost);
@@ -45,7 +47,7 @@ var btnTotals = function () {
                 button.removeClass('disabled');
                 button.addClass('btn-success');
             }
-            if (finalWeight || finalCost < Number(0)){
+            if (finalWeight && finalCost < Number(-1)){
                 alert("Negative Money ain't no thing here!");
                 button.removeClass('btn-success');
                 button.addClass('disabled');
@@ -53,8 +55,21 @@ var btnTotals = function () {
             }
 };
 
+    $('#cargo_btn').on('click', function(event){
+        console.log('clicked');
+        event.preventDefault();
+        $.post('/validate-cargo', {total_cost, total_weight}, function(data){
+            console.log(data.message);
+            $('#cargo_btn').html(data.message);
+            $('#startTrip_btn').removeClass('hidden');
+        });
+    });
+
+
+
 // ADD/REMOVE COOLER -------
 addCooler.click(function (event){
+    event.preventDefault();
     total_cost = Number(total_cost + 100) + Number($(this).val());
     $('#cost-count').text(total_cost);
     total_weight = Number(total_weight + 50) + Number($(this).val());
@@ -63,6 +78,7 @@ addCooler.click(function (event){
 });
 
 remCooler.click(function(event){
+    event.preventDefault();
     total_cost = Number(total_cost - 100) + Number($(this).val());
     $('#cost-count').text(total_cost);
     total_weight = Number(total_weight - 50) + Number($(this).val());
@@ -72,6 +88,7 @@ remCooler.click(function(event){
 
 // ADD/REMOVE TIRE ------------
 addTire.click(function (event){
+    event.preventDefault();
     total_cost = Number(total_cost + 150) + Number($(this).val());
     $('#cost-count').text(total_cost);
     total_weight = Number(total_weight + 180) + Number($(this).val());
@@ -80,6 +97,7 @@ addTire.click(function (event){
 });
 
 remTire.click(function(event){
+    event.preventDefault();
     total_cost = Number(total_cost - 150) + Number($(this).val());
     $('#cost-count').text(total_cost);
     total_weight = Number(total_weight - 180) + Number($(this).val());
@@ -89,6 +107,7 @@ remTire.click(function(event){
 
 // ADD/REMOVE WATER -----------
 addWater.click(function (event){
+    event.preventDefault();
     total_cost = Number(total_cost + 10) + Number($(this).val());
     $('#cost-count').text(total_cost);
     total_weight = Number(total_weight + 10) + Number($(this).val());
@@ -97,6 +116,7 @@ addWater.click(function (event){
 });
 
 remWater.click(function(event){
+    event.preventDefault();
     total_cost = Number(total_cost - 10) + Number($(this).val());
     $('#cost-count').text(total_cost);
     total_weight = Number(total_weight - 10) + Number($(this).val());
@@ -106,6 +126,7 @@ remWater.click(function(event){
 
 //ADD/REMOVE JERKY -----------
 addJerky.click(function (event){
+    event.preventDefault();
     total_cost = Number(total_cost + 5) + Number($(this).val());
     $('#cost-count').text(total_cost);
     total_weight = Number(total_weight + 1) + Number($(this).val());
@@ -114,13 +135,13 @@ addJerky.click(function (event){
 });
 
 remJerky.click(function(event){
+    event.preventDefault();
     total_cost = Number(total_cost - 5) + Number($(this).val());
     $('#cost-count').text(total_cost);
     total_weight = Number(total_weight - 1) + Number($(this).val());
     $('#weight-count').text(total_weight);
     btnTotals();
 });
-
 
 // console.log(total_cost);
 

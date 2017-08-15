@@ -85,9 +85,17 @@ p {
     margin-left: 10px;
 }
 
-.col-md-6  button{
+.hidden {
+    display: none;
+}
+
+#startTrip_btn {
+    margin-top: 40px;
     font-size: 30px;
-    margin-top: 50px;
+}
+
+#cargo_btn{
+    font-size: 30px;
     margin-left: 150px;
     text-transform: uppercase;
     font-weight: bold;
